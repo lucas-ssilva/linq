@@ -1,0 +1,11 @@
+C:\Users\Lucas\source\repos\likar\likar\bin\Debug\netcoreapp3.0\likar.exe
+C:\Users\Lucas\source\repos\likar\likar\bin\Debug\netcoreapp3.0\likar.deps.json
+C:\Users\Lucas\source\repos\likar\likar\bin\Debug\netcoreapp3.0\likar.runtimeconfig.json
+C:\Users\Lucas\source\repos\likar\likar\bin\Debug\netcoreapp3.0\likar.runtimeconfig.dev.json
+C:\Users\Lucas\source\repos\likar\likar\bin\Debug\netcoreapp3.0\likar.dll
+C:\Users\Lucas\source\repos\likar\likar\bin\Debug\netcoreapp3.0\likar.pdb
+C:\Users\Lucas\source\repos\likar\likar\obj\Debug\netcoreapp3.0\likar.csprojAssemblyReference.cache
+C:\Users\Lucas\source\repos\likar\likar\obj\Debug\netcoreapp3.0\likar.AssemblyInfoInputs.cache
+C:\Users\Lucas\source\repos\likar\likar\obj\Debug\netcoreapp3.0\likar.AssemblyInfo.cs
+C:\Users\Lucas\source\repos\likar\likar\obj\Debug\netcoreapp3.0\likar.dll
+C:\Users\Lucas\source\repos\likar\likar\obj\Debug\netcoreapp3.0\likar.pdb
