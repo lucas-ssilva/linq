@@ -78,6 +78,34 @@ namespace likar
             Console.WriteLine();
             var query9 = products.Where(x => x.Id == 30).SingleOrDefault(); // teste pra não trazer resultado 
             Console.WriteLine("teeste pra não trazer nada " + query9);
+            Console.WriteLine();
+            var r10 = products.Max(p => p.Price); //maximo da coleção, pode ser chamado sem parametro 
+            Console.WriteLine("teste max " + r10);
+            Console.WriteLine();
+            var r11 = products.Min(p => p.Price); //minimo da coleção, pode ser chamado sem parametro 
+            Console.WriteLine("teste mmin " + r11);
+            Console.WriteLine();
+            var r12 = products.Where(p => p.Category.Tier == 1).Sum(p => p.Price); //somar todos baseado no primeiro filtro 
+            Console.WriteLine("teste sum " + r12);
+            Console.WriteLine();
+            var r13 = products.Where(p => p.Category.Tier == 1).Average(p => p.Price).ToString("F2"); //media todos baseado no primeiro filtro 
+            Console.WriteLine("teste media " + r13);
+            Console.WriteLine();
+            var r14 = products.Where(p => p.Category.Tier == 5).Select(p => p.Price).DefaultIfEmpty(0.0).Average(); // caso o filtro de vazio para evitar uma exeption usando od efault if empty, nesse caso está protegendo a função de media que da uma exption caso eu tente dividir por 0
+            Console.WriteLine("teste media com defalt if empty" + r14);
+            Console.WriteLine();
+            var r15 = products.Where(p => p.Category.Tier == 2).Select(p => p.Price).Aggregate(0.0,(x, y) => x + y).ToString("F2"); // operação personalizada, exemplo recebe um x e y e soma ele, feito com a expressão lambda, o 0 antes do x e y serve para tratar caso o select de nulo 
+            Console.WriteLine("tier 1 aggregate sum " + r15);
+            Console.WriteLine();
+            var r16 = products.GroupBy(p => p.Category); //seleciona uma categoria ou grupo, precisa de forech especial, no exemplo ele traz todas as categorias de produtos e depois com o segundo forech ele filtra nos produros dentro das categorias 
+            foreach (IGrouping<Category,Product> group in r16)
+            {
+                Console.WriteLine(group.Key.Name + ": ");
+                foreach(Product p in group)
+                {
+                    Console.WriteLine(p);
+                }
+            }
         }
     }
 }
